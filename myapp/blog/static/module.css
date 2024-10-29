@@ -1,0 +1,135 @@
+.module {
+    width: 100%;
+    height: 700px;
+    background-color: black;
+    color: aqua;
+    background-position: fixed;
+    position: relative;
+}
+
+
+.module-outerbox {
+    width: 80%;
+    height: 500px;
+    border: 2px solid firebrick;
+    border-radius: 8px;
+    box-shadow: 0 0 30px firebrick;
+    margin: auto;
+    margin-top: 50px;
+    background-color: black;
+    position: relative;
+}
+
+.module-innerbox {
+    width: 99.99%;
+    height: 464px;
+    border: 2px solid firebrick;
+    margin-top: 18px;
+}
+
+.colr1 {
+    height: 464px;
+    overflow-y: scroll;
+    width: 35%;
+}
+.colr2 {
+    margin: 0%;
+    padding: 0%;
+    height: 460px;
+    width: 65%;
+}
+
+.colr1 .last {
+    position: relative;
+    cursor: pointer;
+    flex: 1;
+    top: 0;
+    right: 0;
+    margin-left: 30px;
+}
+
+
+/* Hide horizontal scrollbar on WebKit-based browsers */
+.colr1::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide horizontal scrollbar on other browsers */
+.colr1 {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+/* .Left {
+    width: 30%;
+    float: left;
+    height: 759px;
+}
+
+.Right {
+    width: 40%;
+    height: 759px;
+    float: right;
+} */
+
+
+ /* Tab list styling */
+ .nav-tabs1 {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-item1 {
+    margin:0%;
+}
+
+.nav-link1 {
+    padding-right:10px;
+    cursor: pointer;
+    color: #848789;
+    background-color: black;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.nav-link1:hover {
+    color: #ffffff;
+}
+
+/* Active tab link styling */
+.nav-link1.active {
+    background-color: black;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Tab content styling */
+.tab-content {
+    color: rgb(235, 232, 232);
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #0c0b0b;
+}
+
+.tab-pane p {
+    margin: 10px;
+    padding: 30px;
+    letter-spacing: 2px;
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+/* Hide inactive tab content */
+.tab-pane {
+    display: none;
+}
+
+/* Show active tab pane */
+.tab-pane.active {
+    display: block;
+}

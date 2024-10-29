@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-2">
+    <div class="row">
+        {% for module in modules %}
+            <div class="col-12 col-md-6 col-lg-6 col-xl-4 mt-4 p-3 ">
+                {% if module %}
+                <a class="text-decoration-none" href="{% url 'blog:detail' module_id=module.id %}">
+                    <div class="card bg-black text-white rounded-5  d-flex flex-column">
+                        <div class="row">
+                            <div class="col-12 ">
+                                <img src="{{module.img_url}}" class="rounded-top-5 h-100 w-100">
+                            </div>
+                            <div class="col-12 ">
+                                <div class="card-body">
+                                    <h4>{{module.title}} </h4>
+                                    <p class="m-0">
+                                        <span class="badge text-secondary "></span><br>
+                                    </p>
+                                </div>
+                                <div class="col-12 card-footer d-flex flex-column  ">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <span class="  text-yellow font-monospace">{{module.phases}}</span>
+                                            </div>
+                                            <div class="col-6 d-flex flex-column align-items-end">
+                                                <span
+                                                    class="  text-success font-monospace">{{module.difficulty}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                {% else %} 
+                <p>No modules available</p>
+                {% endif %}  
+            </div>
+        {% endfor %}    
+        </div>
+    </div>
+</div>
+    
+  
+
+{% endblock %}

@@ -1,0 +1,277 @@
+/* Custom font styling for Roboto (Sans-serif) */
+.roboto-font {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+}
+  
+/* Custom font styling for Georgia (Serif) */
+.georgia-font {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+input::placeholder { color: white !important; }       /* For modern browsers */
+input::-webkit-input-placeholder { color: white !important; } /* For Chrome, Safari, Edge */
+input::-moz-placeholder { color: white !important; }  /* For Firefox 19+ */
+input:-ms-input-placeholder { color: white !important; }  /* For Internet Explorer 10-11 */
+input:-moz-placeholder { color: white !important; } /* For Firefox 18- */
+
+
+
+
+/* menu hover */
+
+#sidebar:hover {
+    background-color: rgba(255, 255, 255, .075);
+    border-left: 3px solid #3b7ddd;
+}
+
+/* section color */
+
+#hcolor ,#fcolor {
+  background-color:#211f1f ;
+}
+ 
+#scolor {
+ background-color:#17242A;
+}
+
+#mcolor {
+background:linear-gradient(to right,#17242A ,#3AAFA9 ) ;
+}
+
+#pathcolor {
+    background-color: #17242A;
+    /* background:linear-gradient(to right,#17242A ,#2d8480 ) ; */
+}
+
+#ccolor , #prcolor  {
+  background-color: #21323a;
+}
+
+#servcolor {
+  background-color: #17242A;  
+}
+/* scrollable Container */
+
+.scrollable-container {
+    height: 600px; 
+    overflow-y: auto; 
+    clear: both;
+}
+
+#dcolor {
+  background-color:#211f1f ;
+}
+
+
+/* Lview style (Course page) */
+
+#nboxshadow1 {
+    border: 2px solid #a0eeff;
+    box-shadow:  0px 0px 50px #D83317;
+    
+}
+
+#nboxshadow2 {
+    border: 2px solid #a0eeff;
+    box-shadow:  0px 0px 50px #22F8F8;
+}
+
+#nboxshadow3 {
+    border: 2px solid #a0eeff;
+    box-shadow:  0px 0px 50px #C51C1F;
+}
+#nboxshadow4 {
+    border: 2px solid #a0eeff;
+    box-shadow:  0px 0px 50px #5BC4C8;
+}
+#nboxshadow5 {
+    border: 2px solid #a0eeff;
+    box-shadow:  0px 0px 50px #F3FDFD;
+}
+#nboxshadow6 {
+    border: 2px solid #a0eeff;
+    box-shadow:  0px 0px 50px #50A69A;
+}
+#nboxshadow7 {
+    border: 2px solid #a0eeff;
+    box-shadow:  0px 0px 50px #0355E3;
+}
+
+#nboxshadow8 {
+    border: 2px solid #a0eeff;
+    box-shadow:  0px 0px 50px #FDDC5C;
+}
+
+.sideline {
+    width: 10px;
+    border-left: 20px solid #1ed4de;
+    border-radius: 5px;
+    position: absolute;
+    animation: sideline 2s  forwards;
+    
+}
+
+@keyframes sideline {
+    from {
+        height: 0;
+      }
+      to {
+        height: 50%;
+      }
+}
+
+.box {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.box.in-view {
+    opacity: 1;
+}
+
+ /* custom text-color  */
+ .text-green {
+    color: #29d86f;
+}
+
+.text-orange {
+  color: #ff6600;
+}
+
+.text-violet {
+color: #ef8aff;
+}
+.text-dblue {
+   color: #1A4862; 
+}
+
+#h-style {
+    background-color: #211F1F;
+   
+}
+
+.size {
+    font-size: 10px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.header {
+    position: relative;
+  }
+  .header .badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+
+/* product style */
+
+#prdctbox { 
+    border-radius: 10px;
+    background-color: gray;
+    box-shadow:inset 0px 0px 40px #22F8F8;
+    transition: all 0.3s ease;
+}
+
+/* custom div box for products */
+@media screen and (min-width: 1080px) {
+    #prdctbox {
+        width:450px ;
+        height: 300px;
+    }
+  }
+
+
+#prdctbox:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 70px #6fc7c7;    
+}
+
+
+
+
+/* service page */
+
+#stylebox {
+    background-image:linear-gradient(to bottom right ,#17242A 50% , #3AAFA9 50%);
+}
+
+#leftstylebox {
+    background-image:linear-gradient(to bottom left , #3AAFA9 50%, #17242A 50%);
+}
+
+#srvcbox { 
+    border-radius: 10px;
+    background-color: gray;
+    box-shadow:inset 0px 0px 40px #22F8F8;
+    transition: all 0.3s ease;
+}
+
+/* custom div box for service */
+@media screen and (min-width: 1080px) {
+    #srvcbox {
+        width:450px ;
+        height: 300px;
+    }
+  }
+
+#srvcbox:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 70px #ffffff;    
+}
+
+
+
+/* Article page */
+
+#aboxshadow {
+    border: 2px solid #a0eeff;
+    transition: all 0.3s ease;
+}
+
+#aboxshadow:hover {
+    transform: scale(0.9);  
+}
+
+/* Index page */
+
+.scroll-container {
+    white-space: nowrap;
+}
+
+.scroll-item {
+    display: inline-block;
+    width: 350px;
+    height: 250px;
+    background:linear-gradient(to right,#17242A ,#2d8480 ) ;
+    border: 1px solid #dee2e6;
+   
+}
+
+/* Hide horizontal scrollbar on WebKit-based browsers */
+.scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide horizontal scrollbar on other browsers */
+  .scroll-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .para-text {
+    letter-spacing: 2px;
+    word-spacing: 3px;
+  }
+
+/* modules page */
+
+.text-yellow {
+    color: #eeff04;
+}
