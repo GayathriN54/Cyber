@@ -130,50 +130,66 @@
                 </div>
     
                 <!-- Add Module-->
-
                 <div class="container-fluid mt-5 d-flex justify-content-end">
-                    <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#addModule">Add modules</button>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#addModule">Add Modules</button>
                 
-                    <div class="modal fade  mt-5"  id="addModule">
+                    <div class="modal fade mt-5" id="addModule">
                         <div class="modal-dialog">
                             <div class="modal-content">
-                                <div class="modal-header text-center mt-2 "><h5>Add New Module</h5></div>
+                                <div class="modal-header text-center mt-2">
+                                    <h5>Add New Module</h5>
+                                </div>
                                 <div class="modal-body">
-                                    <form action="">
+                                    <form method="post" id="moduleForm">
+                                        {% csrf_token %}
                                         <div class="mt-2">
-                                            <label for="ModuleName" >Module Title</label>
-                                            <input class="form-control mt-1" type="text" placeholder="Enter Module name" name="" id="ModuleName">
+                                            <label for="ModuleName">Module Title</label>
+                                            <input
+                                                class="form-control mt-1"
+                                                type="text"
+                                                placeholder="Enter Module name"
+                                                name="title"
+                                                id="ModuleName"
+                                                required
+                                            >
                                         </div>
                                         <div class="mt-4">
-                                            <label for="PhaseNum" id="PhaseNum">Phase</label>
-                                            <select class="form-select mt-1" name="" id="PhaseNum">
-                                                <option>Phase-I</option>
-                                                <option>Phase-II</option>
-                                                <option>Phase-III</option>
-                                                <option>Phase-IV</option>
-                                                <option>Phase-V</option>
-                                                <option>Phase-VI</option>
-                                                <option>Phase-VII</option>
+                                            <label for="PhaseNum">Phase</label>
+                                            <select class="form-select mt-1" name="phase" id="PhaseNum" required>
+                                                <option value="Phase 1">Phase 1</option>
+                                                <option value="Phase 2">Phase 2</option>
+                                                <option value="Phase 3">Phase 3</option>
+                                                <option value="Phase 4">Phase 4</option>
+                                                <option value="Phase 5">Phase 5</option>
+                                                <option value="Phase 6">Phase 6</option>
+                                                <option value="Phase 7">Phase 7</option>
                                             </select>
                                         </div>
                                         <div class="mt-4">
-                                            <label for="PhaseType" >Difficulty</label>
-                                            <select  class="form-select mt-1" name="" id="PhaseType">
-                                                <option>Begginer</option>
-                                                <option>Intermediate</option>
-                                                <option>Advance</option>
+                                            <label for="PhaseType">Difficulty</label>
+                                            <select class="form-select mt-1" name="difficulty" id="PhaseType" required>
+                                                <option value="Beginner">Beginner</option>
+                                                <option value="Intermediate">Intermediate</option>
+                                                <option value="Advanced">Advanced</option>
                                             </select>
+                                        </div>
+                                        <div class="mt-2 d-flex justify-content-end">
+                                            <button class="btn btn-primary my-3 me-2" type="submit">Save Module</button>
+                                            <button class="btn btn-danger my-3 me-2" type="button" data-bs-dismiss="modal">Cancel</button>
                                         </div>
                                     </form>
-                                </div>
-                                <div class="mt-2 d-flex justify-content-end ">
-                                    <button class="btn btn-primary my-3 me-2" type="submit">Save Module</button>
-                                    <button class="btn btn-danger my-3 me-2" data-bs-dismiss="modal" >Cancel</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <script src="{% static 'js/moduleForm.js' %}"></script>
+                
+
+
+                
+            
+
 
                 {% block content %}
                 {% endblock %}
